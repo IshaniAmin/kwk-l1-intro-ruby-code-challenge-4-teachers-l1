@@ -18,13 +18,13 @@ def least_coins(cents)
   place = cents
 
   until cents == 0
-    if cents > quarter
+    if cents >= quarter
         coins[:quarters] += 1
         cents = cents - quarter
-    elsif cents > dime
+    elsif cents >= dime
         coins[:dimes] += 1
         cents = cents - dime
-    elsif cents > nickel
+    elsif cents >= nickel
         coins[:nickels] += 1
         cents = cents - nickel
     elsif cents >= penny
