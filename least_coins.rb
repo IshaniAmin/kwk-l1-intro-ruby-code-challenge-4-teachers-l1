@@ -9,32 +9,24 @@ def least_coins(cents)
     :pennies => 0
   }
 
-  quarter = 25
-  dime = 10
-  nickel = 5
-  penny = 1
-
   counter = 0
-  place = cents
 
   until cents == 0
-    if cents >= quarter
+    if cents >= 25
         coins[:quarters] += 1
-        cents = cents - quarter
-    elsif cents >= dime
+        cents = cents - 25
+    elsif cents >= 10
         coins[:dimes] += 1
-        cents = cents - dime
-    elsif cents >= nickel
+        cents = cents - 10
+    elsif cents >= 5
         coins[:nickels] += 1
-        cents = cents - nickel
-    elsif cents >= penny
+        cents = cents - 5
+    elsif cents >= 1
         coins[:pennies] += 1
-        cents = cents - penny
+        cents = cents - 1
     else
       break
     end
   end
-
   coins
-
 end
