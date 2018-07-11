@@ -31,4 +31,3 @@ def least_coins(cents)
   coins
 end
 
-puts least_coins(7)
